@@ -44,7 +44,7 @@
 
 ![截图](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/ba18028c-4ddc-47b6-abf2-c9ff10d3cb60)
 
-设置 GZCTF-BOT/src/plugin/gzctf-plugin/config.py 中的必选项
+设置 GZCTF-BOT/src/plugin/gzctf-plugin/config.py 中的必选项，然后使用 python 启动 bot.py 即可
 
 #### config.py 设置 🔧
 
