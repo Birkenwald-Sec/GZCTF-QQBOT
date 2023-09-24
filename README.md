@@ -34,6 +34,9 @@
 
 ![微信截图_20230924130854](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/ffce8a38-3bef-4efe-9351-9c12182aa8f3)
 
+最后再次使用 `go-cqhttp` 指令，使用二维码即可登录自己的qq，并实现命令行接收qq信息
+
+也可以直接使用 `go-cqhttp` 提供的API实现消息的发送与接收，详细请前往 [go-cqhttp 官方文档]()
 
 #### 部署Nonebot2 😁
 
