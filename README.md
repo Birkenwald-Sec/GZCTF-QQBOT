@@ -40,8 +40,11 @@
 
 #### 部署Nonebot2 😁
 
+使用git拉取GZCTF-BOT项目
 
+![微信截图_20230924133655](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/ba18028c-4ddc-47b6-abf2-c9ff10d3cb60)
 
+使用python运行bot.py即可
 
 
 
