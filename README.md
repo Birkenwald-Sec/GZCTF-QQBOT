@@ -44,8 +44,18 @@
 
 ![微信截图_20230924133655](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/ba18028c-4ddc-47b6-abf2-c9ff10d3cb60)
 
-使用python运行bot.py即可
+设置 GZCTF-BOT/src/plugin/gzctf-plugin/config.py 中的必选项
 
+#### config.py 设置 🔧
 
+- "WHITE_LIST": 规定指令监听消息的来源
+  - "key": 可触发指令的用户的账号
+  - "value"
+    - "type": "private", "group", "all"
+      - "private": 表示监听单个用户，设置此项则后续 `group` 项无效
+      - "group": 该类型表示监听群组消息， 设置此项则必须设置后续的 `group` 项来指明被监听群的群号
+      - "all": 该类型表示既监听私人信息又监听群组消息，设置此项则必须设置后续的 `group` 项
+      - "注": 所监听的私人用户账号是上面所设置 "key" 字段
+    - "group": 列表，其中添加被监听群的群号，需使用字符串格式 
 
 
