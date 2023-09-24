@@ -14,11 +14,17 @@
 
 此服务使用 Nonebot2 + go-cqhttp 架构完成搭建，需要一点点python基础。
 
+#### 搭建go-cqhttp 😊
+
+首先前往 [go-cqhttp 下载页面](https://github.com/Mrs4s/go-cqhttp/releases) 下载并安装 **`go-cqhttp`** 最新版本
+
+
+
 #### 部署Nonebot2 😁
 
 
 
-#### 搭建go-cqhttp 😊
+
 
 
 
