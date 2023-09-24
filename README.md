@@ -36,7 +36,7 @@
 
 最后再次使用 `go-cqhttp` 指令，使用二维码即可登录自己的qq，并实现命令行接收qq信息
 
-也可以直接使用 `go-cqhttp` 提供的API实现消息的发送与接收，详细请前往 [go-cqhttp 官方文档]()
+也可以直接使用 `go-cqhttp` 提供的API实现消息的发送与接收，详细请前往 [go-cqhttp 官方文档](https://docs.go-cqhttp.org/api/#%E5%9F%BA%E7%A1%80%E4%BC%A0%E8%BE%93)
 
 #### 部署Nonebot2 😁
 
