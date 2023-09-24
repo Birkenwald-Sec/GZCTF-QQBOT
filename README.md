@@ -18,6 +18,21 @@
 
 首先前往 [go-cqhttp 下载页面](https://github.com/Mrs4s/go-cqhttp/releases) 下载并安装 **`go-cqhttp`** 最新版本
 
+使用 go-cqhttp 进行初始化，选择如下
+
+![微信截图_20230924124228](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/c4796e35-9592-4481-b1ef-4ad42c59c70e)
+
+初始化后，打开同目录下的 `config.yml` 文件，配置好自己的登录令牌，密码可选择为空，然后使用扫码进行登录
+
+![微信截图_20230924124324](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/375b00a7-78c3-45d3-90a6-d9759793eedc)
+
+同时，在 `config.yml` 文件中找到 `ws-server` 设置项，进行如下设置
+
+![微信截图_20230924124942](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/8a8aa999-845e-4c78-aaf1-dfdd67369ff2)
+
+打开同目录下的 `device.json` 将 **`protocol`** 项更改为2（Android Watch协议）
+
+![微信截图_20230924130854](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/ffce8a38-3bef-4efe-9351-9c12182aa8f3)
 
 
 #### 部署Nonebot2 😁
