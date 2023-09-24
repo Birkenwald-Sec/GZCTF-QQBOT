@@ -77,5 +77,27 @@
         }
 ```
 
+- "BC_FRESH_TIME": 播报刷新频率，可空，默认20秒一次
+- 
+- "GAME_ID": GZCTF比赛id，可以从比赛URL中获得
+
+![微信截图_20230924141049](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/bb5bfe8d-5248-46d7-a7ed-a30acb7839bb)
+
+- "BC_MESSAGE_TEMPLATE": 播报消息模板
+  - "{type}": 表示消息种类
+  - "{time}": 表示消息发生时间
+  - "{content}": 表示消息内容
+  - "注": 
+
+``` python
+# BC_MESSAGE_TEMPLATE 标准示例
+"BC_MESSAGE_TEMPLATE": """\
+{type} {time}
+{content}"""
+```
+
+![微信截图_20230924141409](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/d1a6a7c1-3ac5-492c-9386-a5fb7688b95d)
+
+
 
 
