@@ -32,7 +32,7 @@ class Config(BaseModel, extra=Extra.ignore):
     """
     # ---------------------- plugin_config ----------------------------
 
-    baseConfig={
+    BASECONFIG={
         # WHITE_LIST Must Be Set, Which Definds The Origin Of The Request
         # The id in the group must exist in the form of a string
         "WHITE_LIST" : { # Set Your List
@@ -42,28 +42,22 @@ class Config(BaseModel, extra=Extra.ignore):
         "ENDPOINT" : { # Set Your Point
             
         },
+        # BASEURL Must Be Set, The Base Url Of Your Gzctf Platform, Like "https://192.168.0.1/"
+        "BASEURL": "",
         # BC_FRESH_TIME Is Optional, Default 20
         "BC_FRESH_TIME" : 20,
-        # GAME_ID Is Optional, Default 1
-        "GAME_ID" : 8,
+        # GAMEMONITORED Is Optional, Default [], Which Represents Monitoring Of All Games Which Is Opening
+        "GAMEMONITORED" : [],
+        # BC_MESSAGE_TEMPLATE Is Optional, Default "类型：{type} 于 {game_title}\n内容： {content}\n时间： {month}-{day} {time}"
         "BC_MESSAGE_TEMPLATE": "",
-        # GZCTF Admin Username, Must Be Set
+        # GZCTF Admin Username, Optional
         "GZCTF_USER": "",
-        # GZCTF Admin Password, Must Be Set
+        # GZCTF Admin Password, Optional
         "GZCTF_USER_PASS": "",
-        # The Headers Of Post Request In Login View, Must Be Set
-        "HEADERS":{},
-        # The Base Url Of Your Gzctf Platform, Like "https://192.168.0.1/", Must Be Set
-        "BASEURL": ""
-    }
-
-    TYPE_LIST = {
-        "Normal" : "【公告更新】",
-        "FirstBlood" : "---> 【一血】 <---",
-        "SecondBlood" : "---> 【二血】 <---",
-        "ThirdBlood" : "---> 【三血】 <---",
-        "NewHint" : "【提示更新】",
-        "NewChallenge" : "【上题目啦】"
+        # TYPE_LIST Is Optional, Which Defined Title Of Type
+        "TYPE_LIST": {
+            
+        }
     }
 
     HELP_LIST = [

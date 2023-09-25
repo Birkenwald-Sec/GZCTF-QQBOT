@@ -11,10 +11,10 @@ __plugin_meta = PluginMetadata(
     config=Config,
 )
 
-config=Config.parse_obj(get_driver().config).baseConfig
+conf=Config.parse_obj(get_driver().config).BASECONFIG
 
 getLogin()
 
-if not checkConfig(config=config):
+if not checkConfig(config=conf):
     print("Config Must Set All Items in [\"ENDPOINT\",\"WHITE_LIST\"]")
     exit()
