@@ -134,9 +134,7 @@ nb plugin install nonebot_plugin_apscheduler
 
 ![image](https://github.com/Birkenwald-Sec/GZCTF-QQBOT/assets/61536775/1941fcff-3a64-4e22-8eef-6ff9f708cf7f)
 
-
-![image](https://github.com/Birkenwald-Sec/GZCTF-QQBOT/assets/61536775/80d1cd23-2359-4aa9-9f7e-c2592bac944e)
-
+![image](https://github.com/Birkenwald-Sec/GZCTF-QQBOT/assets/61536775/d998f09a-d3e3-4528-b23b-ddea0f784050)
 
 - "GZCTF_USER": GZCTF平台管理员账户
 
