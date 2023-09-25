@@ -8,6 +8,12 @@
 - 题目上新播报
 - 题目提示更新播报
 - 赛事公告播报
+- 播报可控开关
+- 多比赛同时监控
+- 可方便的为用户配置权限
+- 可方便的设置消息发送终点
+- 定制型消息模板（让你的公告与众不同 qwq）
+- 拥有较好的拓展性
 
 ### 使用教程 🚗
 
@@ -98,7 +104,12 @@ nb plugin install nonebot_plugin_apscheduler
 
 - "BC_FRESH_TIME": 播报刷新频率，可空，默认20秒一次
 
-- "GAME_ID": GZCTF比赛id，可以从比赛URL中获得
+- "GAMEMONITORED": GZCTF比赛标题，可使用列表指定多个
+
+``` python
+# GAMEMONITORED 标准示例
+"GAMEMONITORED" : ["myCtf1","myCtf2","myCtf3",...]
+```
 
 ![截图](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/bb5bfe8d-5248-46d7-a7ed-a30acb7839bb)
 
@@ -106,13 +117,19 @@ nb plugin install nonebot_plugin_apscheduler
   - "{type}": 表示消息种类
   - "{time}": 表示消息发生时间
   - "{content}": 表示消息内容
+  - "{year}": 消息时间 - 年
+  - "{month}": 消息时间 - 月
+  - "{day}": 消息时间 - 日
+  - "{hour}": 消息时间 - 时
+  - "{minute}": 消息时间 - 分
+  - "{second}": 消息时间 - 秒
+  - "{game_title}": 比赛标题
+  - "{game_id}": 比赛id号
   - "注": 可从 [CQ码](https://docs.go-cqhttp.org/cqcode/#%E8%BD%AC%E4%B9%89) 获取表情字符使用说明
 
 ``` python
 # BC_MESSAGE_TEMPLATE 标准示例
-"BC_MESSAGE_TEMPLATE": """\
-{type} {time}
-{content}"""
+"类型：{type} 于 {game_title}\n内容： {content}\n时间： {month}-{day} {time}"
 ```
 
 ![截图](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/d1a6a7c1-3ac5-492c-9386-a5fb7688b95d)
@@ -120,8 +137,6 @@ nb plugin install nonebot_plugin_apscheduler
 - "GZCTF_USER": GZCTF平台管理员账户
 
 - "GZCTF_USER_PASS": GZCTF平台管理员密码
-
-- "HEADERS": 可从登录页面进行登录抓包获取
 
 - "BASEURL": gzctf平台地址，例：https://www.gzctf.com/
 
