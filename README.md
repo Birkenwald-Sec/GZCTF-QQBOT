@@ -132,7 +132,11 @@ nb plugin install nonebot_plugin_apscheduler
 "类型：{type} 于 {game_title}\n内容： {content}\n时间： {month}-{day} {time}"
 ```
 
-![截图](https://github.com/Birkenwald-Sec/GZCTF-BOT/assets/61536775/d1a6a7c1-3ac5-492c-9386-a5fb7688b95d)
+![image](https://github.com/Birkenwald-Sec/GZCTF-QQBOT/assets/61536775/1941fcff-3a64-4e22-8eef-6ff9f708cf7f)
+
+
+![image](https://github.com/Birkenwald-Sec/GZCTF-QQBOT/assets/61536775/80d1cd23-2359-4aa9-9f7e-c2592bac944e)
+
 
 - "GZCTF_USER": GZCTF平台管理员账户
 
