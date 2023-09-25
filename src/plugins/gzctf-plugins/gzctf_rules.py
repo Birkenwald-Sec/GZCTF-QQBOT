@@ -5,7 +5,7 @@ from nonebot import get_driver
 
 from .config import Config
 
-WHITE_LIST:dict = Config.parse_obj(get_driver().config).baseConfig.get("WHITE_LIST")
+WHITE_LIST:dict = Config.parse_obj(get_driver().config).BASECONFIG.get("WHITE_LIST")
 
 async def checkIfGroup(event:Event):
     return event.json['message_type'] == "group"
