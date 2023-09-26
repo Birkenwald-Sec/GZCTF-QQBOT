@@ -132,7 +132,7 @@ nb plugin install nonebot_plugin_apscheduler
 "类型：{type} 于 {game_title}\n内容： {content}\n时间： {month}-{day} {time}"
 ```
 
-![image](https://github.com/Birkenwald-Sec/GZCTF-QQBOT/assets/61536775/1941fcff-3a64-4e22-8eef-6ff9f708cf7f)
+![image](https://github.com/Birkenwald-Sec/GZCTF-QQBOT/assets/61536775/0ba51842-ef88-4177-bb6b-5bee48e757cd)
 
 ![image](https://github.com/Birkenwald-Sec/GZCTF-QQBOT/assets/61536775/d998f09a-d3e3-4528-b23b-ddea0f784050)
 
