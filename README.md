@@ -143,3 +143,6 @@ nb plugin install nonebot_plugin_apscheduler
 - "BASEURL": gzctf平台地址，例：https://www.gzctf.com/
 
 设置完上述参数后 使用 python运行 bot.py文件即可，如果需要设置为后台运行可以使用 `nohup python3 bot.py >/dev/null 2>&1 &`
+
+**注： GAMEMONITORED 中指定的比赛需要被开启才能够被监听！**
+**注： 机器人部署好之后，可根据自己指定的权限用户向机器人发送 '/帮助' 或 '@你的机器人ID /帮助' 来获取指令帮助手册**
