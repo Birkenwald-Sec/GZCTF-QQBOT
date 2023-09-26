@@ -111,7 +111,7 @@ nb plugin install nonebot_plugin_apscheduler
 "GAMEMONITORED" : ["myCtf1","myCtf2","myCtf3",...]
 ```
 
-![image](https://github.com/Birkenwald-Sec/GZCTF-QQBOT/assets/61536775/ec08707d-e364-498e-97ad-3dedc7efe7fb)
+![image](https://github.com/Birkenwald-Sec/GZCTF-QQBOT/assets/61536775/82afe583-1acf-4842-8e5c-4ffd96ce313c)
 
 - "BC_MESSAGE_TEMPLATE": 播报消息模板
   - "{type}": 表示消息种类
