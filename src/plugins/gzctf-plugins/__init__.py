@@ -5,8 +5,8 @@ from . import gzctf_broadcast, gzctf_help
 from .gzctf_tools import checkConfig, getLogin
 
 __plugin_meta = PluginMetadata(
-    name="mybooot",
-    description="",
+    name="GZ::CTF BOT",
+    description="QQ broadcast bot for gzctf platform",
     usage="",
     config=Config,
 )

@@ -31,7 +31,7 @@ else:
 
 rule=to_me() & checkBeginPoint
 
-#! open 指令路由
+# open 指令路由
 open=on_command("open",aliases={"打开播报","打开"},rule=rule)
 @open.handle()
 async def open_handle(bot,event):
@@ -45,7 +45,7 @@ async def open_handle(bot,event):
     except:
         print("可能被封控了，无法发送群消息")
 
-#! close 指令路由
+# close 指令路由
 clsoe=on_command("close",aliases={"关闭播报","关闭"},rule=rule)
 @clsoe.handle()
 async def close_handle(bot,event):
@@ -59,7 +59,7 @@ async def close_handle(bot,event):
     except:
         print("可能被封控了，无法发送群消息")
 
-#! 查看当前所播报的比赛信息
+# 查看当前所播报的比赛信息
 check=on_command("check",aliases={"查看赛事","查看"},rule=rule)
 @check.handle()
 async def check_handle(bot,event):
@@ -77,19 +77,18 @@ async def check_handle(bot,event):
     except:
         return
 
-#! 定时任务，受控于SEND_ENABLED
+# 定时任务，受控于SEND_ENABLED
 @he.scheduled_job("interval", seconds=BC_FRESH_TIME)
 async def drink_tea():
     global SEND_ENABLED, BC_MESSAGE_TEMPLATE, NOWNOTICELIST, GAMEMONITORED, NOWCONTESTINFO
     bot=get_bot()
-    #! 播报
     if SEND_ENABLED:
-        #! 检测比赛是否有变动，有则更改GAMEMONITORED
+        # 检测比赛是否有变动，有则更改GAMEMONITORED
         tmpContestInfo=getContestInfo()
         if tmpContestInfo != NOWCONTESTINFO:
             NOWCONTESTINFO = tmpContestInfo
             GAMEMONITORED=getGameMonitored()
-        #! 循环获取多个监听比赛的信息并进行处理
+        # 循环获取多个监听比赛的信息并进行处理
         for gameInfo in GAMEMONITORED:
             if (tmpnoticelist:=getNoticeById(f"{gameInfo['id']}")) != NOWNOTICELIST[f"{gameInfo['id']}"]:
                 tmpList=[]

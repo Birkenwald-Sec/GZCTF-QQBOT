@@ -1,18 +1,8 @@
-from nonebot import on_command,get_driver,get_bot
+from nonebot import on_command, get_driver, get_bot
 # from nonebot.adapters.cqhttp import Bot,MessageEvent
 from nonebot.rule import to_me,Rule
 from .gzctf_rules import checkBeginPoint
 from .config import Config
-
-# HELP_LIST = Config.parse_obj(get_driver().config).HELP_LIST
-# HELP_LIST = [
-#         "help alias:帮助、帮助手册\n\
-#  - 查看指令手册\n",
-#         "open alias:打开播报\n\
-#  - 打开播报\n",
-#         "close alias:关闭播报\n\
-#  - 关闭播报\n"
-#  ]
 
 HELP_LIST = "指令示例：@Bot /open\n\
 \t/open => '打开/打开播报'\n\t <---- 打开赛事播报功能 ---->\n\

@@ -2,6 +2,7 @@ from pydantic import BaseModel, Extra
 
 class Config(BaseModel, extra=Extra.ignore):
     # ---------------------- plugin_config ----------------------------
+    # Get Sample From https://github.com/Birkenwald-Sec/GZCTF-QQBOT
     BASECONFIG={
         # WHITE_LIST Must Be Set, Which Definds The Origin Of The Request
         # The id in the group must exist in the form of a string
