@@ -11,10 +11,11 @@ __plugin_meta = PluginMetadata(
     config=Config,
 )
 
-conf=Config.parse_obj(get_driver().config).BASECONFIG
+BASECONFIG=Config.parse_obj(get_driver().config).BASECONFIG
 
-getLogin()
+if BASECONFIG.get("GZCTF_USER") != "" and BASECONFIG.get("GZCTF_USER_PASS") != "":
+    getLogin()
 
-if not checkConfig(config=conf):
+if not checkConfig(config=BASECONFIG):
     print("Config Must Set All Items in [\"ENDPOINT\",\"WHITE_LIST\"]")
     exit()

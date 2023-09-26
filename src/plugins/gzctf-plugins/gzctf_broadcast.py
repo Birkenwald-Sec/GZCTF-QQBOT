@@ -17,9 +17,9 @@ ENDPOINT=BASECONFIG.get('ENDPOINT')
 BC_FRESH_TIME = 20 if not BASECONFIG.get("BC_FRESH_TIME") else BASECONFIG.get("BC_FRESH_TIME")
 BC_MESSAGE_TEMPLATE=BASECONFIG.get("BC_MESSAGE_TEMPLATE") if BASECONFIG.get("BC_MESSAGE_TEMPLATE")\
       else """类型：{type} 于 {game_title}\n内容： {content}\n时间： {month}-{day} {time}"""
-try:
-    TYPE_LIST = BASECONFIG["TYPE_LIST"]
-except:
+if BASECONFIG.get("TYPE_LIST"):
+        TYPE_LIST = BASECONFIG["TYPE_LIST"]
+else:
     TYPE_LIST = {
         "Normal" : "【公告更新】",
         "FirstBlood" : "-> 【一血】",
@@ -32,7 +32,7 @@ except:
 rule=to_me() & checkBeginPoint
 
 #! open 指令路由
-open=on_command("open",aliases={"打开播报"},rule=rule)
+open=on_command("open",aliases={"打开播报","打开"},rule=rule)
 @open.handle()
 async def open_handle(bot,event):
     global SEND_ENABLED
@@ -46,7 +46,7 @@ async def open_handle(bot,event):
         print("可能被封控了，无法发送群消息")
 
 #! close 指令路由
-clsoe=on_command("close",aliases={"关闭播报"},rule=rule)
+clsoe=on_command("close",aliases={"关闭播报","关闭"},rule=rule)
 @clsoe.handle()
 async def close_handle(bot,event):
     global SEND_ENABLED
@@ -60,7 +60,7 @@ async def close_handle(bot,event):
         print("可能被封控了，无法发送群消息")
 
 #! 查看当前所播报的比赛信息
-check=on_command("check",aliases={"比赛信息,比赛"},rule=rule)
+check=on_command("check",aliases={"查看赛事","查看"},rule=rule)
 @check.handle()
 async def check_handle(bot,event):
     global GAMEMONITORED
@@ -72,7 +72,6 @@ async def check_handle(bot,event):
         gameTimeEnd = parseTime(gameInfo['end'])
         msg+=f"\t赛事名称: {gameInfo['title']}\n\t\t开始时间: {gameTimeStart[1]}-{gameTimeStart[2]} {gameTimeStart[3]}:{gameTimeStart[4]}:{gameTimeStart[5]}\
             \n\t\t结束时间: {gameTimeEnd[1]}-{gameTimeEnd[2]} {gameTimeEnd[3]}:{gameTimeEnd[4]}:{gameTimeEnd[5]}\n"
-        
     try:
         await bot.send(event,msg)
     except:
@@ -88,6 +87,7 @@ async def drink_tea():
         #! 检测比赛是否有变动，有则更改GAMEMONITORED
         tmpContestInfo=getContestInfo()
         if tmpContestInfo != NOWCONTESTINFO:
+            NOWCONTESTINFO = tmpContestInfo
             GAMEMONITORED=getGameMonitored()
         #! 循环获取多个监听比赛的信息并进行处理
         for gameInfo in GAMEMONITORED:
